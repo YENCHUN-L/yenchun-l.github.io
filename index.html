@@ -1,205 +1,796 @@
 <!DOCTYPE HTML>
-<!--
-	Multiverse by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="en">
 	<head>
-		<title>YEN-CHUN LIU</title>
+		<title>Yen-Chun Liu — Data, Audit &amp; Product Portfolio</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Yen-Chun Liu is an IT audit and BI professional building data solutions and products such as Y Exhibition Design Tool." />
+		<meta name="theme-color" content="#111613" />
+		<meta property="og:title" content="Yen-Chun Liu — Data, Audit &amp; Product Portfolio" />
+		<meta property="og:description" content="Business intelligence, data analytics, and product projects by Yen-Chun Liu." />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="https://yedt.dev/landing/booth-concept.png" />
+		<meta property="og:image:alt" content="Exhibition booth concept designed with Y Exhibition Design Tool" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			:root {
+				--surface: #171d1a;
+				--surface-raised: #202824;
+				--ink: #f2f4ef;
+				--muted: #aab5ad;
+				--accent: #b8e986;
+				--line: rgba(226, 239, 228, 0.12);
+			}
+
+			html {
+				scroll-behavior: smooth;
+				scroll-padding-top: 6rem;
+			}
+
+			body {
+				background: #111613;
+				color: var(--muted);
+				padding: 5rem 0 0;
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				color: var(--ink);
+				letter-spacing: -0.025em;
+				text-transform: none;
+			}
+
+			a {
+				color: var(--accent);
+			}
+
+			a:hover {
+				color: #d5f6b4 !important;
+			}
+
+			#header {
+				background: rgba(17, 22, 19, 0.94);
+				backdrop-filter: blur(16px);
+				border-bottom: 1px solid var(--line);
+				bottom: auto;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				height: 5rem;
+				left: 50%;
+				line-height: normal;
+				max-width: 80rem;
+				padding: 0 2rem;
+				position: fixed;
+				top: 0;
+				transform: translateX(-50%);
+				user-select: auto;
+				width: 100%;
+			}
+
+			body.is-preload #header {
+				transform: translate(-50%, -3.4em);
+			}
+
+			#header nav {
+				position: static;
+			}
+
+			#header h1 {
+				font-size: 1rem;
+				font-weight: 600;
+			}
+
+			#header h1 a {
+				color: var(--ink);
+			}
+
+			#header nav > ul > li a {
+				color: var(--muted);
+				font-size: 0.78rem;
+				font-weight: 600;
+				letter-spacing: 0.04em;
+				padding: 0 0 0 1.75rem;
+				text-transform: none;
+			}
+
+			#header nav > ul > li a:hover {
+				color: var(--accent) !important;
+			}
+
+			#header nav > ul > li a:before {
+				display: none;
+			}
+
+			#main {
+				display: block;
+				margin: 0 auto;
+				max-width: 76rem;
+				padding: 0 2rem;
+			}
+
+			#main:after {
+				display: none;
+			}
+
+			.intro {
+				align-items: center;
+				border-bottom: 1px solid var(--line);
+				display: grid;
+				gap: 3rem;
+				grid-template-columns: minmax(0, 1.4fr) minmax(15rem, 0.6fr);
+				padding: clamp(4rem, 9vw, 8rem) 0;
+			}
+
+			.eyebrow {
+				color: var(--accent);
+				font-size: 0.75rem;
+				font-weight: 600;
+				letter-spacing: 0.14em;
+				margin: 0 0 1.25rem;
+				text-transform: uppercase;
+			}
+
+			.intro h2 {
+				font-size: clamp(2.8rem, 6vw, 5.4rem);
+				font-weight: 600;
+				letter-spacing: -0.065em;
+				line-height: 1.02;
+				margin: 0;
+				max-width: 12ch;
+			}
+
+			.intro h2 span {
+				color: var(--accent);
+			}
+
+			.intro-copy {
+				font-size: 1.08rem;
+				line-height: 1.75;
+				margin: 1.5rem 0 0;
+				max-width: 39rem;
+			}
+
+			.intro-actions {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.8rem;
+				margin-top: 2rem;
+			}
+
+			.action-link {
+				align-items: center;
+				border: 1px solid var(--line);
+				border-radius: 999px;
+				color: var(--ink);
+				display: inline-flex;
+				font-size: 0.88rem;
+				font-weight: 600;
+				gap: 0.6rem;
+				padding: 0.8rem 1.2rem;
+				text-decoration: none;
+			}
+
+			.action-link.primary {
+				background: var(--accent);
+				border-color: var(--accent);
+				color: #172014;
+			}
+
+			.action-link:hover {
+				border-color: var(--accent);
+				color: var(--ink) !important;
+				transform: translateY(-2px);
+			}
+
+			.action-link.primary:hover {
+				color: #172014 !important;
+			}
+
+			.intro-aside {
+				background: radial-gradient(circle at 100% 0, rgba(184, 233, 134, 0.13), transparent 55%), var(--surface);
+				border: 1px solid var(--line);
+				border-radius: 1.25rem;
+				padding: 1.6rem;
+			}
+
+			.intro-aside p {
+				margin: 0;
+			}
+
+			.intro-aside .aside-label {
+				color: var(--muted);
+				font-size: 0.76rem;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+			}
+
+			.focus-list {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.55rem;
+				list-style: none;
+				margin: 1rem 0 0;
+				padding: 0;
+			}
+
+			.focus-list li,
+			.project-tags li {
+				background: rgba(255, 255, 255, 0.06);
+				border: 1px solid var(--line);
+				border-radius: 999px;
+				color: #d4ddd5;
+				font-size: 0.75rem;
+				line-height: 1.4;
+				padding: 0.4rem 0.7rem;
+			}
+
+			.projects-section {
+				padding: 4.5rem 0 5rem;
+			}
+
+			.section-heading {
+				align-items: end;
+				display: flex;
+				gap: 1rem;
+				justify-content: space-between;
+				margin-bottom: 1.7rem;
+			}
+
+			.section-heading h2 {
+				font-size: clamp(1.8rem, 4vw, 2.6rem);
+				font-weight: 600;
+				margin: 0;
+			}
+
+			.section-heading p {
+				font-size: 0.9rem;
+				margin: 0.45rem 0 0;
+			}
+
+			.project-filters {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.55rem;
+				margin: 0 0 1.5rem;
+			}
+
+			.project-filters button {
+				background: transparent;
+				border: 1px solid var(--line);
+				border-radius: 999px;
+				color: var(--muted);
+				cursor: pointer;
+				font: inherit;
+				font-size: 0.82rem;
+				padding: 0.55rem 0.9rem;
+				transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+			}
+
+			.project-filters button:hover,
+			.project-filters button[aria-pressed="true"] {
+				background: var(--accent);
+				border-color: var(--accent);
+				color: #172014;
+			}
+
+			.project-filters button:focus-visible,
+			a:focus-visible {
+				outline: 2px solid var(--accent);
+				outline-offset: 3px;
+			}
+
+			.project-count {
+				font-size: 0.82rem;
+				margin: 0 0 1rem;
+			}
+
+			.projects-grid {
+				display: grid;
+				gap: 1.1rem;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+			}
+
+			.project-card {
+				background: var(--surface);
+				border: 1px solid var(--line);
+				border-radius: 1rem;
+				display: flex;
+				flex-direction: column;
+				min-width: 0;
+				overflow: hidden;
+				transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+			}
+
+			.project-card:hover {
+				background: var(--surface-raised);
+				border-color: rgba(184, 233, 134, 0.5);
+				transform: translateY(-4px);
+			}
+
+			.project-card[hidden] {
+				display: none;
+			}
+
+			.project-image {
+				aspect-ratio: 16 / 10;
+				background: #29332d;
+				border: 0;
+				display: block;
+				overflow: hidden;
+			}
+
+			.project-image img {
+				display: block;
+				height: 100%;
+				object-fit: cover;
+				transition: transform 0.35s ease;
+				width: 100%;
+			}
+
+			.project-card:hover .project-image img {
+				transform: scale(1.04);
+			}
+
+			.project-content {
+				display: flex;
+				flex: 1;
+				flex-direction: column;
+				padding: 1.2rem;
+			}
+
+			.project-category {
+				color: var(--accent);
+				font-size: 0.7rem;
+				font-weight: 600;
+				letter-spacing: 0.1em;
+				margin: 0 0 0.6rem;
+				text-transform: uppercase;
+			}
+
+			.project-content h3 {
+				font-size: 1.08rem;
+				font-weight: 600;
+				letter-spacing: -0.015em;
+				line-height: 1.35;
+				margin: 0;
+			}
+
+			.project-description {
+				font-size: 0.88rem;
+				line-height: 1.6;
+				margin: 0.65rem 0 1rem;
+			}
+
+			.project-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.4rem;
+				list-style: none;
+				margin: auto 0 1.1rem;
+				padding: 0;
+			}
+
+			.project-tags li {
+				font-size: 0.7rem;
+				padding: 0.28rem 0.55rem;
+			}
+
+			.project-link {
+				align-self: flex-start;
+				border: 0;
+				font-size: 0.84rem;
+				font-weight: 600;
+			}
+
+			.about-section {
+				border-top: 1px solid var(--line);
+				display: grid;
+				gap: 2rem;
+				grid-template-columns: 1fr 1fr;
+				padding: 4rem 0;
+			}
+
+			.about-section h2 {
+				font-size: 1.8rem;
+				font-weight: 600;
+				margin: 0 0 0.8rem;
+			}
+
+			.about-section p {
+				line-height: 1.75;
+				margin: 0;
+				max-width: 40rem;
+			}
+
+			.experience-list {
+				list-style: none;
+				margin: 1.5rem 0 0;
+				padding: 0;
+			}
+
+			.experience-list li {
+				border-left: 2px solid var(--accent);
+				margin-top: 1rem;
+				padding: 0.05rem 0 0.05rem 1rem;
+			}
+
+			.experience-list strong {
+				color: var(--ink);
+				font-weight: 600;
+			}
+
+			.experience-list span {
+				display: block;
+				font-size: 0.85rem;
+				margin-top: 0.2rem;
+			}
+
+			.about-links {
+				align-content: start;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.75rem;
+				justify-content: flex-end;
+			}
+
+			.education-note {
+				font-size: 0.9rem;
+				margin-top: 1.25rem !important;
+			}
+
+			.site-footer {
+				border-top: 1px solid var(--line);
+				font-size: 0.8rem;
+				padding: 1.4rem 0 2rem;
+			}
+
+			@media screen and (max-width: 900px) {
+				.projects-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+
+				.intro {
+					gap: 2rem;
+					grid-template-columns: minmax(0, 1fr) minmax(13rem, 0.7fr);
+				}
+			}
+
+			@media screen and (max-width: 736px) {
+				body {
+					padding-top: 4rem;
+				}
+
+				#header {
+					left: 0;
+					height: 4rem;
+					padding: 0 1rem;
+					transform: none;
+					width: 100%;
+				}
+
+				body.is-preload #header {
+					transform: translateY(-3.4em);
+				}
+
+				#header h1 {
+					font-size: 0.85rem;
+				}
+
+				#header nav > ul > li a {
+					font-size: 0.8rem;
+					padding-left: 0.8rem;
+				}
+
+				#main {
+					padding: 0 1.1rem;
+				}
+
+				.intro {
+					gap: 1.6rem;
+					grid-template-columns: 1fr;
+					padding: 4.2rem 0 3rem;
+				}
+
+				.intro h2 {
+					font-size: clamp(2.7rem, 12vw, 4rem);
+				}
+
+				.intro-aside {
+					max-width: none;
+				}
+
+				.projects-section {
+					padding: 3rem 0;
+				}
+
+				.section-heading {
+					align-items: flex-start;
+					flex-direction: column;
+				}
+
+				.about-section {
+					grid-template-columns: 1fr;
+					padding: 3rem 0;
+				}
+
+				.about-links {
+					justify-content: flex-start;
+				}
+			}
+
+			@media screen and (max-width: 520px) {
+				.projects-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.project-image {
+					aspect-ratio: 16 / 9;
+				}
+
+				.intro-actions .action-link {
+					font-size: 0.8rem;
+					padding: 0.7rem 0.9rem;
+				}
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				html {
+					scroll-behavior: auto;
+				}
+
+				*, *::before, *::after {
+					animation-duration: 0.01ms !important;
+					animation-iteration-count: 1 !important;
+					scroll-behavior: auto !important;
+					transition-duration: 0.01ms !important;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
+		<div id="wrapper">
+			<header id="header">
+				<h1><a href="#top"><strong>YEN-CHUN LIU</strong></a></h1>
+				<nav aria-label="Main navigation">
+					<ul>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#about">About</a></li>
+					</ul>
+				</nav>
+			</header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+			<main id="main">
+				<section class="intro" id="top" aria-labelledby="intro-title">
+					<div>
+						<p class="eyebrow">IT audit · Business intelligence · Product</p>
+						<h2 id="intro-title">Turning data into <span>clearer decisions.</span></h2>
+						<p class="intro-copy">I’m Yen-Chun, an IT audit and BI professional who turns complex data into useful insights—and builds practical digital products that make better workflows possible.</p>
+						<div class="intro-actions">
+							<a class="action-link primary" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
+							<a class="action-link" href="#about">A little about me</a>
+						</div>
+					</div>
+					<aside class="intro-aside" aria-label="Areas of focus">
+						<p class="aside-label">A few things I work with</p>
+						<ul class="focus-list">
+							<li>Python</li>
+							<li>R</li>
+							<li>SQL</li>
+							<li>Tableau</li>
+							<li>Power BI</li>
+							<li>Alteryx</li>
+							<li>VBA</li>
+						</ul>
+					</aside>
+				</section>
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html"><strong>YEN-CHUN LIU</strong> Internal Auditor / BI analyst</a></h1>
-						<nav>
-							<ul>
-								<li><a href="#footer" class="icon solid fa-info-circle">About</a></li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Main -->
-					<div id="main">
-						
-						<article class="thumb">
-						    <a href="https://github.com/YENCHUN-L/Topic-Modelling-on-Text-Data-NLP-/blob/master/R_Markdown.pdf" target="_blank">
-						        <img src="images/thumbs/nlp.jpg" alt="" width="100%" height="100%" />
-						    </a>
-						    <h2>Natural Language Processing - Topic modelling on text data</h2>
-						</article>
-						
-						<!---<article class="thumb">
-							<a href="images/fulls/nlp.jpg" class="image"><img src="images/thumbs/nlp.jpg" alt="" /></a>
-							<h2 align="justify">Natural Language Processing</h2>
-							<p align="justify"><a href="https://github.com/YENCHUN-L/Topic-Modelling-on-Text-Data-NLP-/blob/master/R_Markdown.pdf" target="_blank">Topic modelling on text data</p>
-						</article>--->
-
-						
-						<article class="thumb">
-						    <a href="https://public.tableau.com/app/profile/yenchunliu#!/" target="_blank">
-						        <img src="images/thumbs/tableau.jpg" alt="" width="100%" height="100%" />
-						    </a>
-						    <h2>Tableau Dashboards</h2>
-						</article>
-						
-						<!---<article class="thumb">
-							<a href="images/fulls/tableau.jpg" class="image"><img src="images/thumbs/tableau.jpg" alt="" /></a>
-							<h2 align="justify">Tableau</h2>
-							<p align="justify"><a href="https://public.tableau.com/app/profile/yenchunliu#!/" target="_blank">Tableau Dashboards</p>
-						</article>--->
-
-						
-						<article class="thumb">
-						    <a href="https://github.com/YENCHUN-L/EPEX-machine-learning" target="_blank">
-						        <img src="images/thumbs/lightning.jpg" alt="" width="100%" height="100%" />
-						    </a>
-						    <h2>Machine learning on electricity trading</h2>
-						</article>
-						
-						<!---<article class="thumb">
-							<a href="images/fulls/lightning.jpg" class="image"><img src="images/thumbs/lightning.jpg" alt="" /></a>
-							<h2 align="justify">Machine learning</h2></center>
-							<p align="justify"><a href="https://github.com/YENCHUN-L/EPEX-machine-learning" target="_blank">Machine learning on electricity trading</p>
-						</article>--->
-						
-
-						<article class="thumb">
-						    <a href="https://github.com/YENCHUN-L/Coursera_Capstone_IBM-Data-Science-Professional-Certificate" target="_blank">
-						        <img src="images/thumbs/crash.jpg" alt="" width="100%" height="100%" />
-						    </a>
-						    <h2>Machine learning on collisions</h2>
-						</article>
-						
-						<!---<article class="thumb">
-							<a href="images/fulls/crash.jpg" class="image"><img src="images/thumbs/crash.jpg" alt="" /></a>
-							<h2 align="justify">Machine learning</h2>
-							<p align="justify"><a href="https://github.com/YENCHUN-L/Coursera_Capstone_IBM-Data-Science-Professional-Certificate" target="_blank">Machine learning on collisions</p>
-						</article>--->
-						
-						
-						<article class="thumb">
-						    <a href="https://github.com/YENCHUN-L/R/blob/master/Forecasting/Pdf/2382MonthlySales.pdf" target="_blank">
-						        <img src="images/thumbs/stock.jpg" alt="" width="100%" height="100%" />
-						    </a>
-						    <h2>R - Forecasting Quanta monthly sales</h2>
-						</article>
-
-						<!---<article class="thumb">
-							<a href="images/fulls/stock.jpg" class="image"><img src="images/thumbs/stock.jpg" alt="" /></a>
-							<h2 align="justify">Forecasting</h2>
-							<p align="justify"><a href="https://github.com/YENCHUN-L/R/blob/master/Forecasting/Pdf/2382MonthlySales.pdf" target="_blank">Forecasting Quanta monthly sales</p>
-						</article>--->
-
-						
-						<article class="thumb">
-						    <a href="https://github.com/YENCHUN-L/Python/tree/master/Combine_csv_to_csv" target="_blank">
-						        <img src="images/thumbs/stack.jpg" alt="" width="100%" height="100%" />
-						    </a>
-						    <h2>Python - Combine CSV Files</h2>
-						</article>
-						
-						<!---<article class="thumb">
-							<a href="images/fulls/stack.jpg" class="image"><img src="images/thumbs/stack.jpg" alt="" /></a>
-							<h2>Python</h2>
-							<p><a href="https://github.com/YENCHUN-L/Python/tree/master/Combine_csv_to_csv" target="_blank">Combine csv from single folder</p>
-						</article>--->
-						
-
-						<article class="thumb">
-						    <a href="https://github.com/YENCHUN-L/VBA/tree/master/Compress outlook attachments with password and send email" target="_blank">
-						        <img src="images/thumbs/lock.jpg" alt="" width="100%" height="100%" />
-						    </a>
-						    <h2>VBA - Compress Outlook attachments with password</h2>
-						</article>
-
-						<article class="thumb">
-						    <a href="https://github.com/YENCHUN-L/Parking_App" target="_blank">
-						        <img src="images/thumbs/ParkAPP.jpg" alt="" width="100%" height="100%" />
-						    </a>
-						    <h2>ParkAPP</h2>
-						</article>
-
-						<article class="thumb">
-						    <a href="https://github.com/YENCHUN-L/FL_Opt_Airway_Intersects" target="_blank">
-						        <img src="images/thumbs/FL_Opt_Airway_Intersects.png" alt="" width="100%" height="100%" />
-						    </a>
-						    <h2>FL Opt Airway Intersects</h2>
-						</article>
-						
-						<!---<article class="thumb">
-							<a href="images/fulls/lock.jpg" class="image"><img src="images/thumbs/lock.jpg" alt="" /></a>
-							<h2>VBA</h2>
-							<p><a href="https://github.com/YENCHUN-L/VBA/tree/master/Compress outlook attachments with password and send email" target="_blank">Compress Outlook attachments with password</p>
-						</article>--->
-						
-							
-						<article class="thumb">
-							<a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt="" /></a>
-							<h2>TBU</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt="" /></a>
-							<h2>TBU</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt="" /></a>
-							<h2>TBU</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt="" /></a>
-							<h2>TBU</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt="" /></a>
-							<h2>TBU</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
+				<section class="projects-section" id="projects" aria-labelledby="projects-title">
+					<div class="section-heading">
+						<div>
+							<p class="eyebrow">Selected work</p>
+							<h2 id="projects-title">Projects</h2>
+							<p>A selection of analytics, machine learning, and automation projects.</p>
+						</div>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer" class="panel">
-						<div class="inner split">
-							<div>
-								<section>
-									<h2>YEN-CHUN LIU</h2>
-									<p>Internal auditor & Business Intelligence Analyst with a demonstrated history of working in manufacturing industry. Skilled in Python, R, Tableau, and Power BI. With a Master of Science focused in Big Data Analytics for Business from IÉSEG School of Management.</p>
-								</section>
-								<section>
-									<h2>Follow me on ...</h2>
-									<ul class="icons">
-										<li><a href="https://github.com/YENCHUN-L" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-										<li><a href="https://www.linkedin.com/in/yenchunl/" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
-									</ul>
-								</section>
-								<p class="copyright">
-									&copy; Unttled. Design: <a href="http://html5up.net">HTML5 UP</a>.
-								</p>
+					<div class="project-filters" role="group" aria-label="Filter projects">
+						<button type="button" data-filter="all" aria-pressed="true">All projects</button>
+						<button type="button" data-filter="product" aria-pressed="false">Product</button>
+						<button type="button" data-filter="analytics" aria-pressed="false">BI &amp; analytics</button>
+						<button type="button" data-filter="machine-learning" aria-pressed="false">Machine learning</button>
+						<button type="button" data-filter="automation" aria-pressed="false">Automation &amp; apps</button>
+					</div>
+					<p class="project-count" id="project-count" aria-live="polite">Showing 10 projects</p>
+
+					<div class="projects-grid">
+						<article class="project-card" data-category="product">
+							<a class="project-image" href="https://yedt.dev/" target="_blank" rel="noopener noreferrer" aria-label="Visit Y Exhibition Design Tool">
+								<img src="https://yedt.dev/landing/booth-concept.png" alt="Exhibition booth concept preview from Y Exhibition Design Tool" width="1536" height="1024" loading="lazy" decoding="async" />
+							</a>
+							<div class="project-content">
+								<p class="project-category">Product project</p>
+								<h3>Y Exhibition Booth Design Tool</h3>
+								<p class="project-description">A browser-based tool for planning exhibition booths in 2D, reviewing the same layout in synchronized 3D, and sharing concept specifications.</p>
+								<ul class="project-tags"><li>Product design</li><li>2D / 3D</li><li>Web app</li></ul>
+								<a class="project-link" href="https://yedt.dev/" target="_blank" rel="noopener noreferrer">Explore YEDT <span aria-hidden="true">↗</span></a>
 							</div>
-						</div>
-					</footer>
+						</article>
 
-			</div>
+						<article class="project-card" data-category="analytics">
+							<a class="project-image" href="https://github.com/YENCHUN-L/Topic-Modelling-on-Text-Data-NLP-/blob/master/R_Markdown.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open topic modelling project">
+								<img src="images/thumbs/nlp.jpg" alt="Topic modelling project artwork" width="640" height="400" fetchpriority="high" decoding="async" />
+							</a>
+							<div class="project-content">
+								<p class="project-category">Text analytics</p>
+								<h3>Topic modelling on text data</h3>
+								<p class="project-description">Explore text data with natural language processing and topic modelling.</p>
+								<ul class="project-tags"><li>NLP</li><li>R</li><li>Text data</li></ul>
+								<a class="project-link" href="https://github.com/YENCHUN-L/Topic-Modelling-on-Text-Data-NLP-/blob/master/R_Markdown.pdf" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a>
+							</div>
+						</article>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+						<article class="project-card" data-category="analytics">
+							<a class="project-image" href="https://public.tableau.com/app/profile/yenchunliu#!/" target="_blank" rel="noopener noreferrer" aria-label="Open Tableau dashboards">
+								<img src="images/thumbs/tableau.jpg" alt="Tableau dashboard project artwork" width="640" height="400" loading="lazy" decoding="async" />
+							</a>
+							<div class="project-content">
+								<p class="project-category">Business intelligence</p>
+								<h3>Tableau dashboards</h3>
+								<p class="project-description">A collection of interactive dashboards and visual analytics.</p>
+								<ul class="project-tags"><li>Tableau</li><li>Dashboards</li><li>BI</li></ul>
+								<a class="project-link" href="https://public.tableau.com/app/profile/yenchunliu#!/" target="_blank" rel="noopener noreferrer">View dashboards <span aria-hidden="true">↗</span></a>
+							</div>
+						</article>
 
+						<article class="project-card" data-category="machine-learning">
+							<a class="project-image" href="https://github.com/YENCHUN-L/EPEX-machine-learning" target="_blank" rel="noopener noreferrer" aria-label="Open electricity trading machine learning project">
+								<img src="images/thumbs/lightning.jpg" alt="Electricity trading machine learning project artwork" width="640" height="400" loading="lazy" decoding="async" />
+							</a>
+							<div class="project-content">
+								<p class="project-category">Machine learning</p>
+								<h3>Machine learning for electricity trading</h3>
+								<p class="project-description">Applying machine learning techniques to electricity trading data.</p>
+								<ul class="project-tags"><li>Machine learning</li><li>Energy</li><li>Trading</li></ul>
+								<a class="project-link" href="https://github.com/YENCHUN-L/EPEX-machine-learning" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a>
+							</div>
+						</article>
+
+						<article class="project-card" data-category="machine-learning">
+							<a class="project-image" href="https://github.com/YENCHUN-L/Coursera_Capstone_IBM-Data-Science-Professional-Certificate" target="_blank" rel="noopener noreferrer" aria-label="Open collision analysis project">
+								<img src="images/thumbs/crash.jpg" alt="Collision analysis project artwork" width="640" height="400" loading="lazy" decoding="async" />
+							</a>
+							<div class="project-content">
+								<p class="project-category">Machine learning</p>
+								<h3>Machine learning on collisions</h3>
+								<p class="project-description">A data science capstone focused on collision analysis.</p>
+								<ul class="project-tags"><li>Data science</li><li>Machine learning</li><li>Capstone</li></ul>
+								<a class="project-link" href="https://github.com/YENCHUN-L/Coursera_Capstone_IBM-Data-Science-Professional-Certificate" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a>
+							</div>
+						</article>
+
+						<article class="project-card" data-category="analytics">
+							<a class="project-image" href="https://github.com/YENCHUN-L/R/blob/master/Forecasting/Pdf/2382MonthlySales.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Quanta sales forecasting project">
+								<img src="images/thumbs/stock.jpg" alt="Quanta monthly sales forecasting project artwork" width="640" height="400" loading="lazy" decoding="async" />
+							</a>
+							<div class="project-content">
+								<p class="project-category">Forecasting</p>
+								<h3>Forecasting Quanta monthly sales</h3>
+								<p class="project-description">An R-based analysis to forecast monthly sales.</p>
+								<ul class="project-tags"><li>R</li><li>Forecasting</li><li>Sales</li></ul>
+								<a class="project-link" href="https://github.com/YENCHUN-L/R/blob/master/Forecasting/Pdf/2382MonthlySales.pdf" target="_blank" rel="noopener noreferrer">View analysis <span aria-hidden="true">↗</span></a>
+							</div>
+						</article>
+
+						<article class="project-card" data-category="automation">
+							<a class="project-image" href="https://github.com/YENCHUN-L/Python/tree/master/Combine_csv_to_csv" target="_blank" rel="noopener noreferrer" aria-label="Open Python CSV utility">
+								<img src="images/thumbs/stack.jpg" alt="CSV file utility project artwork" width="640" height="400" loading="lazy" decoding="async" />
+							</a>
+							<div class="project-content">
+								<p class="project-category">Automation</p>
+								<h3>Combine CSV files with Python</h3>
+								<p class="project-description">A small Python utility for combining CSV files.</p>
+								<ul class="project-tags"><li>Python</li><li>CSV</li><li>Automation</li></ul>
+								<a class="project-link" href="https://github.com/YENCHUN-L/Python/tree/master/Combine_csv_to_csv" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a>
+							</div>
+						</article>
+
+						<article class="project-card" data-category="automation">
+							<a class="project-image" href="https://github.com/YENCHUN-L/VBA/tree/master/Compress outlook attachments with password and send email" target="_blank" rel="noopener noreferrer" aria-label="Open Outlook attachment utility">
+								<img src="images/thumbs/lock.jpg" alt="Outlook attachment utility project artwork" width="640" height="400" loading="lazy" decoding="async" />
+							</a>
+							<div class="project-content">
+								<p class="project-category">Automation</p>
+								<h3>Secure Outlook attachments</h3>
+								<p class="project-description">A VBA workflow to compress Outlook attachments with password protection.</p>
+								<ul class="project-tags"><li>VBA</li><li>Outlook</li><li>Automation</li></ul>
+								<a class="project-link" href="https://github.com/YENCHUN-L/VBA/tree/master/Compress outlook attachments with password and send email" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a>
+							</div>
+						</article>
+
+						<article class="project-card" data-category="automation">
+							<a class="project-image" href="https://github.com/YENCHUN-L/Parking_App" target="_blank" rel="noopener noreferrer" aria-label="Open ParkAPP project">
+								<img src="images/thumbs/ParkAPP.jpg" alt="ParkAPP project artwork" width="640" height="400" loading="lazy" decoding="async" />
+							</a>
+							<div class="project-content">
+								<p class="project-category">Application</p>
+								<h3>ParkAPP</h3>
+								<p class="project-description">An application project focused on parking.</p>
+								<ul class="project-tags"><li>App</li><li>Project</li></ul>
+								<a class="project-link" href="https://github.com/YENCHUN-L/Parking_App" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a>
+							</div>
+						</article>
+
+						<article class="project-card" data-category="analytics">
+							<a class="project-image" href="https://github.com/YENCHUN-L/FL_Opt_Airway_Intersects" target="_blank" rel="noopener noreferrer" aria-label="Open airway intersections project">
+								<img src="images/thumbs/FL_Opt_Airway_Intersects.png" alt="Airway intersections project artwork" width="640" height="400" loading="lazy" decoding="async" />
+							</a>
+							<div class="project-content">
+								<p class="project-category">Data project</p>
+								<h3>FL Opt Airway Intersects</h3>
+								<p class="project-description">A project exploring airway intersections and optimization.</p>
+								<ul class="project-tags"><li>Data analysis</li><li>Optimization</li></ul>
+								<a class="project-link" href="https://github.com/YENCHUN-L/FL_Opt_Airway_Intersects" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a>
+							</div>
+						</article>
+					</div>
+				</section>
+
+				<section class="about-section" id="about" aria-labelledby="about-title">
+					<div>
+						<p class="eyebrow">A little about me</p>
+						<h2 id="about-title">Yen-Chun Liu</h2>
+						<p>I build analytics and audit solutions that turn complex processes into clearer decisions. My experience spans internal audit, BI, data pipelines, dashboard development, automation, and product design.</p>
+						<ul class="experience-list">
+							<li><strong>Assistant Manager, IT Audit / BI Analyst</strong><span>KPMG · 2022–present</span></li>
+							<li><strong>Senior Internal Auditor / BI Analyst</strong><span>FuSheng Precision · 2021–2022</span></li>
+						</ul>
+						<p class="education-note">MSc in Big Data Analytics for Business · IÉSEG School of Management</p>
+					</div>
+					<div class="about-links" aria-label="More about Yen-Chun">
+						<a class="action-link" href="https://github.com/YENCHUN-L" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+						<a class="action-link" href="https://www.linkedin.com/in/yenchunl/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+					</div>
+				</section>
+
+				<footer class="site-footer">
+					<p>&copy; Yen-Chun Liu. Design sample based on the original HTML5 UP portfolio.</p>
+				</footer>
+			</main>
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+			(function() {
+				var filterButtons = document.querySelectorAll('.project-filters button');
+				var projectCards = document.querySelectorAll('.project-card');
+				var projectCount = document.getElementById('project-count');
+
+				filterButtons.forEach(function(button) {
+					button.addEventListener('click', function() {
+						var filter = button.getAttribute('data-filter');
+						var visibleCount = 0;
+
+						filterButtons.forEach(function(filterButton) {
+							filterButton.setAttribute('aria-pressed', filterButton === button ? 'true' : 'false');
+						});
+
+						projectCards.forEach(function(card) {
+							var isVisible = filter === 'all' || card.getAttribute('data-category') === filter;
+							card.hidden = !isVisible;
+							if (isVisible)
+								visibleCount++;
+						});
+
+						projectCount.textContent = 'Showing ' + visibleCount + (visibleCount === 1 ? ' project' : ' projects');
+					});
+				});
+			})();
+		</script>
 	</body>
 </html>
