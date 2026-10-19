@@ -259,19 +259,32 @@
 				background: transparent;
 				border: 1px solid var(--line);
 				border-radius: 999px;
-				color: var(--muted);
+				box-shadow: none;
+				color: var(--muted) !important;
 				cursor: pointer;
 				font: inherit;
 				font-size: 0.82rem;
-				padding: 0.55rem 0.9rem;
+				font-weight: 600;
+				height: auto;
+				letter-spacing: 0.04em;
+				line-height: 1.4;
+				padding: 0.55rem 0.95rem;
 				transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 			}
 
 			.project-filters button:hover,
-			.project-filters button[aria-pressed="true"] {
+			.project-filters button:hover:active {
+				background: transparent;
+				border-color: var(--accent);
+				box-shadow: none;
+				color: var(--ink) !important;
+			}
+
+			.project-filters button[aria-pressed="true"],
+			.project-filters button[aria-pressed="true"]:hover {
 				background: var(--accent);
 				border-color: var(--accent);
-				color: #172014;
+				color: #172014 !important;
 			}
 
 			.project-filters button:focus-visible,
